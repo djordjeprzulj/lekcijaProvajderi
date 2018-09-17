@@ -18,7 +18,9 @@ import { SimpleService } from './simple.service';
       background-color: #D1E751;
       padding: 10px;
     }
-  `]
+  `],
+  providers: [SimpleService]
+
 })
 export class ParentComponent {
   constructor(public service: SimpleService) { }
