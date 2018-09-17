@@ -11,7 +11,7 @@ import { SimpleService } from './simple.service';
                     name="value" [(ngModel)]="service.value">
                 </div>
               </form>
-              <app-child></app-child>
+              <ng-content></ng-content>
             </div>`,
   styles: [`
     .parent {
@@ -19,7 +19,8 @@ import { SimpleService } from './simple.service';
       padding: 10px;
     }
   `],
-  providers: [SimpleService]
+  // providers: [SimpleService]
+  viewProviders: [SimpleService]
 
 })
 export class ParentComponent {
